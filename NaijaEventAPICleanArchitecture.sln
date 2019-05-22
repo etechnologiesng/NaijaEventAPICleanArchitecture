@@ -5,13 +5,15 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NaijaEvent.Core", "NaijaEvent.Core", "{D16FBED4-2F0C-463E-9902-0BAB33E53D73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaijaEvent.Domain", "NaijaEvent.Domain\NaijaEvent.Domain.csproj", "{90F561BD-C1E2-4B24-AE79-A1C3BE23DE0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaijaEvent.Domain", "NaijaEvent.Domain\NaijaEvent.Domain.csproj", "{90F561BD-C1E2-4B24-AE79-A1C3BE23DE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaijaEvent.Application", "NaijaEvent.Application\NaijaEvent.Application.csproj", "{A92CFC30-3D9E-4196-A99C-942A5E9EC5BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaijaEvent.Application", "NaijaEvent.Application\NaijaEvent.Application.csproj", "{A92CFC30-3D9E-4196-A99C-942A5E9EC5BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{99E4E633-2B5B-4911-A1F5-20A43B45966D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaijaEvent.Persistance", "NaijaEvent.Persistance\NaijaEvent.Persistance.csproj", "{6A099D46-2352-4451-B03F-119F94C04C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaijaEvent.Persistance", "NaijaEvent.Persistance\NaijaEvent.Persistance.csproj", "{6A099D46-2352-4451-B03F-119F94C04C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaijaEvent.Notification", "NaijaEvent.Notification\NaijaEvent.Notification.csproj", "{E554DE4A-35C4-4C32-B7C2-04994D5B32A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{6A099D46-2352-4451-B03F-119F94C04C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A099D46-2352-4451-B03F-119F94C04C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A099D46-2352-4451-B03F-119F94C04C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E554DE4A-35C4-4C32-B7C2-04994D5B32A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E554DE4A-35C4-4C32-B7C2-04994D5B32A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E554DE4A-35C4-4C32-B7C2-04994D5B32A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E554DE4A-35C4-4C32-B7C2-04994D5B32A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{90F561BD-C1E2-4B24-AE79-A1C3BE23DE0F} = {D16FBED4-2F0C-463E-9902-0BAB33E53D73}
 		{A92CFC30-3D9E-4196-A99C-942A5E9EC5BD} = {D16FBED4-2F0C-463E-9902-0BAB33E53D73}
 		{6A099D46-2352-4451-B03F-119F94C04C9A} = {99E4E633-2B5B-4911-A1F5-20A43B45966D}
+		{E554DE4A-35C4-4C32-B7C2-04994D5B32A3} = {99E4E633-2B5B-4911-A1F5-20A43B45966D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56EF9B49-A3F7-4746-8CAD-C85E8DFE93EF}

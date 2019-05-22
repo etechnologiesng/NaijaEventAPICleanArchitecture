@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using NaijaEvent.Application;
+using NaijaEvent.Application.Interfaces;
 using System;
 using System.Threading;
 using System.Threading.Tasks;

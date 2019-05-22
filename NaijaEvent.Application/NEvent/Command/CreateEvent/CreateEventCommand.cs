@@ -1,9 +1,10 @@
 ﻿using MediatR;
+using NaijaEvent.Application.Common;
 using System;
 
 namespace NaijaEvent.Application
 {
-    public class CreateEventCommand : IRequest
+    public class CreateEventCommand : IRequest<RequestResult>
     {
         public Guid EventId { get; set; }
         public string EventName { get; set; }

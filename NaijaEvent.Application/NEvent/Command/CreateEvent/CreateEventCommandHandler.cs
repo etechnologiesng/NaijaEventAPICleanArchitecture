@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace NaijaEvent.Application.Event.Command.CreateEvent
 {
-    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand>
+    public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, RequestResult>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMediator _mediator;
@@ -20,6 +20,9 @@ namespace NaijaEvent.Application.Event.Command.CreateEvent
             _mediator = mediator;
             _unitOfWork = unitOfWork;
         }
+
+    
+
         public async Task<RequestResult> Handle(CreateEventCommand request, CancellationToken cancellationToken)
         {
 
@@ -36,8 +39,10 @@ namespace NaijaEvent.Application.Event.Command.CreateEvent
                 var result = _unitOfWork.NEvent.Add(nEvent);
 
                 await _unitOfWork.CompleteAsync();
-               _mediator.Publish()
-
+              await  _mediator.Publish(new NEventCreated {
+                    NEventName = nEvent.EventName
+                }
+                );
                 return await RequestResult.Success();
             }
             catch (Exception ex)
@@ -45,5 +50,10 @@ namespace NaijaEvent.Application.Event.Command.CreateEvent
                 return RequestResult.Error(new Exception("There was an error creating the article", ex));
             }
         }
+
+        
+        
+
+       
     }
 }
