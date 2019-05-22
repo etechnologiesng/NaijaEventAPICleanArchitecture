@@ -5,12 +5,8 @@ using System.Threading.Tasks;
 
 namespace NaijaEvent.Application.Interfaces
 {
-   public interface IUnitOfWork : IDisposable
+    public interface INotificationService
     {
-        
-            INEventRepository NEvent { get; }      
-            Task CompleteAsync();
-        }
-
+        Task SendAsync(Message message);
     }
 }

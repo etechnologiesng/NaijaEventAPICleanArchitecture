@@ -1,5 +1,7 @@
 ﻿using MediatR;
 using NaijaEvent.Application.Common;
+using NaijaEvent.Application.Interfaces;
+using NaijaEvent.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,14 +12,38 @@ namespace NaijaEvent.Application.Event.Command.CreateEvent
 {
     public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand>
     {
-        public Task<Unit> Handle(CreateEventCommand request, CancellationToken cancellationToken)
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMediator _mediator;
+
+        public CreateEventCommandHandler(IUnitOfWork unitOfWork, IMediator mediator)
+        {
+            _mediator = mediator;
+            _unitOfWork = unitOfWork;
+        }
+        public async Task<RequestResult> Handle(CreateEventCommand request, CancellationToken cancellationToken)
         {
 
             try
             {
+                var nEvent = new NEvent
+                {
+                    Description = request.Description,
+                    EndDate = request.EndDate,
+                    StartDate = request.StartDate,
+                    EventName = request.EventName,
+                    EventId = request.EventId
+                };
+                var result = _unitOfWork.NEvent.Add(nEvent);
 
+                await _unitOfWork.CompleteAsync();
+               _mediator.Publish()
+
+                return await RequestResult.Success();
             }
-            throw new NotImplementedException();
+            catch (Exception ex)
+            {
+                return RequestResult.Error(new Exception("There was an error creating the article", ex));
+            }
         }
     }
 }

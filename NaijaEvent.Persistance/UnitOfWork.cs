@@ -1,12 +1,13 @@
 ﻿using NaijaEvent.Application.Interfaces;
 using NaijaEvent.Persistance.Respository;
 using System;
+using System.Threading.Tasks;
 
 namespace NaijaEvent.Persistance
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public INEventRepository nEvent => throw new NotImplementedException();
+       
 
         private readonly NaijaEventContext _context;
         
@@ -17,12 +18,11 @@ namespace NaijaEvent.Persistance
            
         }
 public INEventRepository NEvent { get;  private set; }
-       
-        
 
-        public int Complete()
+
+        public async Task CompleteAsync()
         {
-            return _context.SaveChanges();
+             await _context.SaveChangesAsync();
         }
 
         public void Dispose()
@@ -30,14 +30,6 @@ public INEventRepository NEvent { get;  private set; }
             _context.Dispose();
         }
 
-        public int Complete()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
+  
     }
 }
