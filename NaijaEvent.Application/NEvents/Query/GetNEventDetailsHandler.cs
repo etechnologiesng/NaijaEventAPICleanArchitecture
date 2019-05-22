@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using NaijaEvent.Application.DTOs;
+using NaijaEvent.Application.Exceptions;
 using NaijaEvent.Application.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace NaijaEvent.Application.NEvent.Query
         {
             var result = await _unitOfWork.NEvent.FindAsync(b => b.nEventid == request.nEventId);
 
-            return (result) ? _mapper.ProjectTo<NEventDTO>(result) : null;
+            return (result != null) ? _mapper.ProjectTo<NEventDTO>(result) : throw new NotFoundException(nameof(NEvent), request.nEventId);
         }
     }
 }
