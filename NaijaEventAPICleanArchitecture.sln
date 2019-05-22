@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaijaEvent.Domain", "NaijaE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaijaEvent.Application", "NaijaEvent.Application\NaijaEvent.Application.csproj", "{A92CFC30-3D9E-4196-A99C-942A5E9EC5BD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{99E4E633-2B5B-4911-A1F5-20A43B45966D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NaijaEvent.Infrastructure", "NaijaEvent.Infrastructure", "{99E4E633-2B5B-4911-A1F5-20A43B45966D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaijaEvent.Persistance", "NaijaEvent.Persistance\NaijaEvent.Persistance.csproj", "{6A099D46-2352-4451-B03F-119F94C04C9A}"
 EndProject

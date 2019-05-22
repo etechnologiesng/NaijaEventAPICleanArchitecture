@@ -13,8 +13,4 @@
     <ProjectReference Include="..\NaijaEvent.Domain\NaijaEvent.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="NEvent\Query\" />
-  </ItemGroup>
-
 </Project>
