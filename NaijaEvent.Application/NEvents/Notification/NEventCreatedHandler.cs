@@ -5,7 +5,10 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-public class NEventCreatedHandler : INotificationHandler<NEventCreated>
+
+namespace NaijaEvent.Application.NEvents.Notification
+{
+    public class NEventCreatedHandler : INotificationHandler<NEventCreated>
     {
         private readonly INotificationService _notification;
 
@@ -19,6 +22,6 @@ public class NEventCreatedHandler : INotificationHandler<NEventCreated>
             await _notification.SendAsync(new Message());
         }
 
-    
+    }
 }
 

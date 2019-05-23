@@ -13,4 +13,4 @@ namespace NaijaEvent.Application.Interfaces
         }
 
     }
-}
+

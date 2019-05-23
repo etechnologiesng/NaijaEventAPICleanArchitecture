@@ -1,14 +1,16 @@
 ﻿using MediatR;
 using NaijaEvent.Application.Common;
 using NaijaEvent.Application.Interfaces;
+using NaijaEvent.Application.NEvents.Notification;
 using NaijaEvent.Domain;
+using NaijaEvent.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NaijaEvent.Application.Event.Command.CreateEvent
+namespace NaijaEvent.Application.NEvents.Command.CreateEvent
 {
     public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, RequestResult>
     {

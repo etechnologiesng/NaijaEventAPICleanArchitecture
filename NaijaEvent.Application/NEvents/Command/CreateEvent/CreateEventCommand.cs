@@ -2,7 +2,7 @@
 using NaijaEvent.Application.Common;
 using System;
 
-namespace NaijaEvent.Application
+namespace NaijaEvent.Application.NEvents.Command.CreateEvent
 {
     public class CreateEventCommand : IRequest<RequestResult>
     {

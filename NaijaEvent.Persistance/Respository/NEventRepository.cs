@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NaijaEvent.Application.Interfaces;
 using NaijaEvent.Domain;
+using NaijaEvent.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

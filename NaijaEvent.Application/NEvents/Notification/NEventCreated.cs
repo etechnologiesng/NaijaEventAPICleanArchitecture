@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace NaijaEvent.Application
+namespace NaijaEvent.Application.NEvents.Notification
 {
     public class NEventCreated : INotification
     {

@@ -1,4 +1,5 @@
 ﻿using NaijaEvent.Application.Interfaces;
+using NaijaEvent.Application.NEvents.Notification;
 using System;
 using System.Threading.Tasks;
 

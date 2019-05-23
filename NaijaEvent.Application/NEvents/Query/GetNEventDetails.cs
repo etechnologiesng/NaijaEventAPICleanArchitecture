@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NaijaEvent.Application.NEvent.Query
+namespace NaijaEvent.Application.NEvents.Query
 {
    public class GetNEventDetails :  IRequest<NEventDTO>
     {
