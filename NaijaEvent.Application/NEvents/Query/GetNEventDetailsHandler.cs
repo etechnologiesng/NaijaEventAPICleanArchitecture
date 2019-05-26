@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace NaijaEvent.Application.NEvents.Query
 {
-    class GetNEventDetailsHandler : IRequestHandler<GetNEventDetails, NEventDTO>
+  public  class GetNEventDetailsHandler : IRequestHandler<GetNEventDetails, NEventDTO>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;

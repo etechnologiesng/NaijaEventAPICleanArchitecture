@@ -10,11 +10,10 @@ namespace NaijaEvent.Persistance
   public  class NaijaEventContext : DbContext
     {
 
-        public NaijaEventContext() : base()
-        {
 
-        }
-
+        public NaijaEventContext(DbContextOptions<NaijaEventContext> options)
+          : base(options)
+        { }
         public DbSet<NEvent> NEvents { get; set; }
     }
 }

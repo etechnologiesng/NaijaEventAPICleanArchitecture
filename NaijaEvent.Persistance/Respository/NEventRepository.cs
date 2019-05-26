@@ -27,6 +27,7 @@ namespace NaijaEvent.Persistance.Respository
 
         public async Task<IEnumerable<NEvent>> FindAsync(Expression<Func<NEvent, bool>> predicate)
         {
+
         return  _context.NEvents.Where(predicate);
           
         }

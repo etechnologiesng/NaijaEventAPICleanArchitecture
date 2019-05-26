@@ -13,7 +13,8 @@ namespace NaijaEvent.Application.NEvents
 
         public NEventProfile()
         {
-            CreateMap<NEvent, NEventDTO>();
+            CreateMap<NEvent, NEventDTO>()
+                .ForMember(a => a.EventName, c => c.MapFrom(d => d.EventName));
         }
     }
 }
