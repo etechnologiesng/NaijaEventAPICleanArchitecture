@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NaijaEvent.Persistance.Respository
 {
-    class NEventRepository : INEventRepository
+   public class NEventRepository : INEventRepository
     {
         protected readonly NaijaEventContext _context;
 

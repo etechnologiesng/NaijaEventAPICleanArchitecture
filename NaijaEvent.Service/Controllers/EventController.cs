@@ -27,6 +27,8 @@ namespace NaijaEvent.Service.Controllers
         [Route("api/[controller]")]
 
         [HttpGet]
+        
+        [ProducesResponseType(typeof(IEnumerable<NEventDTO>), statusCode:200)]
         public async Task<ActionResult<NEventDTO>> index()
         {
             return Ok(await _mediator.Send(new GetAllNEventQuery()));
@@ -39,6 +41,7 @@ namespace NaijaEvent.Service.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(Boolean),200)]
         public async Task<ActionResult<bool>> Create([FromBody] CreateEventCommand command)
         {
 

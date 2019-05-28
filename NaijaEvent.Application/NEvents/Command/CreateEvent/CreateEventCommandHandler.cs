@@ -49,7 +49,7 @@ namespace NaijaEvent.Application.NEvents.Command.CreateEvent
             }
             catch (Exception ex)
             {
-                return RequestResult.Error(new Exception("There was an error creating the article", ex));
+                return RequestResult.Error(new Exception("There was an error creating the Event", ex));
             }
         }
 
