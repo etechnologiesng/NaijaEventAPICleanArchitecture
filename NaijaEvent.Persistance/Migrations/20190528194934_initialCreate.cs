@@ -12,7 +12,7 @@ namespace NaijaEvent.Persistance.Migrations
                 columns: table => new
                 {
                     EventId = table.Column<Guid>(nullable: false),
-                    Eventid = table.Column<Guid>(nullable: false),
+                   // Eventid = table.Column<Guid>(nullable: false),
                     EventName = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     StartDate = table.Column<DateTime>(nullable: false),

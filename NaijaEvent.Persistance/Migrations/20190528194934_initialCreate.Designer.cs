@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NaijaEvent.Domain.Entities;
 using NaijaEvent.Persistance;
 
 namespace NaijaEvent.Persistance.Migrations
@@ -38,7 +39,15 @@ namespace NaijaEvent.Persistance.Migrations
 
                     b.HasKey("EventId");
 
-                    b.ToTable("NEvents");
+                    b.ToTable("NEvents").HasData(new   {
+
+                      EventName = "The First",
+                      Description="This is the very first",
+                      EndDate = new DateTime(2009,04,5),
+                        StartDate = new DateTime(2009, 04, 5)
+
+
+                    });
                 });
 #pragma warning restore 612, 618
         }
